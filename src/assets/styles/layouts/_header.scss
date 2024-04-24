@@ -1,0 +1,48 @@
+header {
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+
+    .header__left {
+      display: flex;
+      flex-direction: row;
+    }
+
+    @media (min-width: $tabletMinWidth) {
+      flex-direction: row;
+
+      .header__left {
+        display: flex;
+        flex: 0 0 40%;
+      }
+
+      .header__right {
+        flex: 0 0 60%;
+      }
+
+      .header__menu {
+        ul {
+          flex-direction: row;
+          justify-content: flex-end;
+        }
+      }
+
+      @media (min-width: $desktopMinWidth) {
+        .header__left {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+
+          > div {
+            flex-grow: 2;
+            flex-shrink: 0;
+          }
+        }
+      }
+    }
+  }
+}

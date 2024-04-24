@@ -1,57 +1,155 @@
-* {
-  box-sizing: border-box;
-}
+.index {
+  header {
+    color: white;
+    background-color: black;
 
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
-}
-
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+    &.border-bottom {
+      border-bottom: none !important;
+    }
   }
-}
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+  h1,
+  h2,
+  h3 {
+    color: white;
+    margin-top: 1rem;
   }
-}
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
+  main {
+    background: no-repeat url("/src/assets/images/chef-cooking.png");
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+
+    .home {
+      width: 100%;
+      margin: 0 auto;
+      color: white;
+
+      section {
+        width: 100%;
+
+        li {
+          float: left;
+          min-width: 200px;
+          list-style-type: none;
+
+          &.title {
+            background: none;
+          }
+        }
+
+        @supports not (display: grid) {
+          @media (max-width: $tabletMinWidth) {
+            .grid {
+              display: flex;
+              flex-direction: column;
+            }
+            .title {
+              justify-content: center;
+            }
+          }
+        }
+
+        @supports (display: grid) {
+          @media (max-width: $tabletMinWidth) {
+            .grid {
+              display: grid;
+              grid-auto-rows: auto;
+            }
+          }
+        }
+
+        .my-card {
+          width: 300px;
+          padding: 10px;
+          margin: 10px;
+          background: rgb(255 255 255 / 0.1);
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  @supports not (display: grid) {
+    @media (min-width: $tabletMinWidth) {
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+      }
+
+      .flex-row {
+        display: flex;
+        flex: 1;
+
+        align-items: center;
+        &__center {
+          display: flex;
+          flex: 1;
+          justify-content: center;
+          text-align: center;
+        }
+
+        &__right {
+          display: flex;
+          flex: 1;
+          justify-content: flex-end;
+          margin-right: calc(10vw);
+        }
+
+        &__left {
+          display: flex;
+          flex: 1;
+          justify-content: flex-start;
+          margin-left: calc(10vw);
+        }
+      }
+
+      .flex-center {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .flex-left {
+        justify-content: flex-start;
+        width: 300px;
+      }
+
+      .flex-right {
+        justify-content: flex-end;
+        width: 300px;
+      }
+    }
+  }
+
+  @supports (display: grid) {
+    @media (min-width: $tabletMinWidth) {
+      .grid {
+        display: grid;
+        grid-template-rows: 4rem 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(5, minmax(100px, 1fr));
+      }
+
+      .title {
+        grid-row: 1 / 2;
+        grid-column: 3 / 5;
+      }
+
+      .first-price {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+      }
+
+      .second-price {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+      }
+
+      .third-price {
+        grid-row: 3 / 4;
+        grid-column: 5 / 6;
+      }
+    }
+  }
 }

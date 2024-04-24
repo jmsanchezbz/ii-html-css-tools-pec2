@@ -1,0 +1,52 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+
+  &__right {
+    .ulist {
+      flex-direction: row;
+
+      &__element {
+        &:hover {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $tabletMinWidth) {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    justify-items: center;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__center {
+      .ulist {
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+    }
+
+    &__right {
+      .ulist {
+        flex-direction: row;
+        justify-content: flex-end;
+
+        &__element:hover {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

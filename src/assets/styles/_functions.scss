@@ -1,0 +1,45 @@
+@use "sass:color";
+@use "sass:string";
+
+@function generate-shade($base-color, $percentage) {
+  @return mix(white, $base-color, $percentage);
+}
+/*
+@function invert($color, $amount: 100%) {
+  $inverted-hue: (color.hue($color) + 180 % 360);
+  $inverse: color.change($color, $hue: $inverted-hue);
+  @debug "hola";
+  @return mix($inverse, $color, $amount);
+}
+
+@function min($numbers...) {
+  $min: get-first($numbers);
+
+  @each $number in $numbers {
+    @if $min > $number {
+      $min: $number;
+    }
+  }
+
+  @return $min;
+}
+
+@function subs($numbers...) {
+  $subs: 0;
+  @each $number in $numbers {
+    $subs: $subs - $number;
+  }
+  @return $subs;
+}
+
+@function sum($numbers...) {
+  $sum: 0;
+  @each $number in $numbers {
+    $sum: $sum + $number;
+  }
+  @return $sum;
+}
+
+@function to-uppercase($str) {
+  @return string.upcase($str);
+}*/
