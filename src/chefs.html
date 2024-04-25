@@ -1,18 +1,83 @@
 <!doctype html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <include src="./views/header.html"></include>
-    <main>
-      hola
-    </main>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+  <title>UOC Boilerplate</title>
+</head>
+
+<body>
+  <include src="./views/header.html"></include>
+  <main class="container chef">
+    <h1>Best chefs</h1>
+    <section class="flex-container">
+      <article class="my-card card h-100">
+        <img src="./assets/images/gramsey.webp" class="my-card__image card-img-top" alt="Chef Gordon Ramsey">
+        <div class="my-card__body card-body">
+          <h5 class="card-title">Gordon Ramsey</h5>
+          <p class="card-text text-start">A Scottish-born British chef, restaurateur, television presenter, and author.
+            Known for
+            his fiery and demanding personality as well as his exquisite cuisine, Ramsay has been awarded 17 Michelin
+            stars, the highest culinary accolade, and currently heads a restaurant empire around the world.</p>
+        </div>
+      </article>
+      <article class="my-card card h-100">
+        <img src="./assets/images/jamie-oliver.webp" class="my-card__image card-img-top" alt="Chef Jamie Oliver">
+        <div class="my-card__body card-body">
+          <h5 class="card-title">Jamie Oliver</h5>
+          <p class="card-text text-start">
+            British chef known for his infectious enthusiasm, approachable cooking style, and dedication to healthy
+            eating. He's a champion for fresh ingredients and simple techniques, often showcasing his passion through
+            cookbooks, restaurants, and ongoing campaigns to improve school lunches.
+          </p>
+        </div>
+      </article>
+      <article class="my-card card h-100">
+        <img src="./assets/images/ferran-adria.jpeg" class="my-card__image card-img-top" alt="Chef Ferran Adrià">
+        <div class="my-card__body card-body">
+          <h5 class="card-title">Ferran Adrià</h5>
+          <p class="card-text text-start">A highly influential Spanish chef, rose to fame for his innovative and often
+            deconstructivist approach to cuisine. Born in Barcelona in 1962, Adrià revolutionized the culinary world by
+            pushing boundaries
+            with techniques, textures, and unexpected flavor combinations.</p>
+        </div>
+      </article>
+      <article class="my-card card h-100">
+        <img src="./assets/images/Ming-Tsai.jpg" class="my-card__image card-img-top" alt="Chef Ming Tsai">
+        <div class="my-card__body card-body">
+          <h5 class="card-title">Ming Tsai</h5>
+          <p class="card-text text-start">Ming Tsai is a Chinese-American celebrity chef known for his innovative fusion
+            cuisine that blends East Asian flavors with Western techniques. Born in Taiwan and raised in Connecticut,
+            Tsai's culinary journey reflects this cultural bridge. </p>
+        </div>
+      </article>
+      <article class="my-card card h-100">
+        <img src="./assets/images/joan-roca.jpg" class="my-card__image card-img-top" alt="Chef Joan Roca">
+        <div class="my-card__body card-body">
+          <h5 class="card-title">Joan Roca</h5>
+          <p class="card-text text-start">Spanish chef renowned for his artistry and meticulous approach to cuisine.
+            Joan's cooking is known for its focus on fresh, seasonal ingredients, meticulous plating, and a deep
+            exploration of flavor and texture. He is a champion for sustainability and ethical sourcing while staying
+            true to his Catalan heritage.</p>
+        </div>
+      </article>
+      <article class="my-card card h-100">
+        <img src="./assets/images/mashama-bailey.jpg" class="my-card__image card-img-top" alt="Chef Mashama Bailey">
+        <div class="my-card__body card-body">
+          <h5 class="card-title">Mashama Bailey</h5>
+          <p class="card-text text-start">Mashama Bailey is an American chef trained in French technique who is
+            currently cooking Southern cuisine. In 2019, Bailey was awarded a James Beard Award as best chef of the
+            southeast. In 2022, Bailey was awarded a James Beard Award as Outstanding Chef.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
 </html>

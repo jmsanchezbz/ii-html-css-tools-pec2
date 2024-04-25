@@ -1,0 +1,54 @@
+.chef {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .my-card {
+      flex-shrink: 0;
+      width: 90%;
+      height: 400px;
+      margin: 20px;
+      box-shadow: 0 2px 5px rgba(0 0 0 / 0.1);
+
+      &__image {
+        height:300px;
+          object-fit: cover;
+          object-position: top;
+      }
+      
+      &__body {
+          height: 240px;
+          background-color: rgb(240 240 240);
+      }
+    }
+  }
+
+  @media (min-width: $tabletMinWidth) {
+    .flex-container {
+      flex-direction: row;
+
+      .my-card {
+        width: 40%;
+        height: 400px;
+        margin: 20px;
+      }
+    }
+  }
+
+  @media (min-width: $desktopMinWidth) {
+    .flex-container {
+      .my-card {
+        width: 30%;
+        height: 400px;
+        margin: 20px;
+      }
+    }
+  }
+}
