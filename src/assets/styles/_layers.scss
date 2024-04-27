@@ -1,0 +1,28 @@
+/* Right layer has more priority than left layer */
+
+@layer defaults, components, utilities;
+
+@layer defaults {
+  /* Reset */
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+}
+
+@layer components {
+  .carousel-caption {
+    background-color: rgba(240 240 240 / 0.7);
+  }
+  
+}
+
+@layer utilities {
+  .a {
+    color: rgb(0 0 0);
+  }
+}

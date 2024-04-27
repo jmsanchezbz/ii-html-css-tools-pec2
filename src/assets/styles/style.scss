@@ -57,7 +57,7 @@ main {
     flex-shrink: 0;
     align-self: flex-start;
     list-style: none;
-    @include m.hover-underline;
+    @include m.hover-style;
   }
 
   &__link {

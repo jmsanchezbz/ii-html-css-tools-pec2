@@ -1,3 +1,9 @@
+body:has(a[href*="/"]):has(.home) {
+  .ulist__element a[href*="/"] {
+    border-bottom: 1px solid rgba(var(--bs-link-color-rgb));
+  }
+}
+
 .index {
   header {
     color: white;

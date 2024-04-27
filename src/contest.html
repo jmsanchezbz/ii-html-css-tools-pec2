@@ -1,27 +1,111 @@
 <!DOCTYPE html>
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+  <title>Top Chef - Contest</title>
+</head>
+
+<body>
+  <include src="./views/header.html"></include>
+  <div class="front-image text-sm-center">
+    <div class="container-sm mb-5 width-60">
+      <h2>Cooking contest</h2>
+      <h4 class="mb-5">We are searching for the ultimate champion Three-Course-Challange, a show -stopping appetizes, a
+        flavorful main course, and a decadent dessert.</h4>
+      <h6>by TopChef</h6>
     </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+  </div>
+  <main class="container">
+    <div class="contest">
+      <div class="row align-items-start mt-5 mb-5">
+        <div class="col-md-4">
+          <figure>
+            <blockquote>
+              <p>So when people ask me, ‘What do you think of Michelin?’ I don’t cook for guides. I cook for customers.
+              </p>
+            </blockquote>
+            <footer class="blockquote-footer">
+              Gordon Ramsey
+            </footer>
+          </figure>
+        </div>
+        <div class="col-md-8">
+          <p>Calling all culinary innovators! Unleash your creativity in the "Top Chef" competition. We're searching for
+            the most imaginative main course featuring a starring protein and a supporting cast of vibrant vegetables.
+            Dazzle our judges with unexpected flavor combinations, innovative cooking techniques, and stunning plate
+            presentations. Let your creativity sizzle and your skills shine – the winning dish will be a masterpiece for
+            both the palate and the eye!</p>
+        </div>
+      </div>
+
+      <div class="list-group text-center border-top border-bottom mb-5">
+        <ol class="olist pt-4">
+          <li class="olist__element text-start">
+            <h4 class="olist__element-title">Entrée</h4>
+            <p class="olist__element-text">Create a stunning appetizer
+              that sets the tone for the rest of the meal. With creativity and precision, entrants showcase their
+              culinary skills by crafting dishes that not only excite the palate but also leave a lasting impression
+              on the judges. From delicate seafood starters to vibrant vegetarian bites, each entrant strives to
+              deliver
+              a small but impactful taste experience.</p>
+          </li>
+          <li class="olist__element text-start">
+            <h4 class="olist__element-title">Main course</h4>
+            <p class="olist__element-text">Prepare a standout dish that serves as the centerpiece of the meal. With a
+              focus on technique and flavor
+              balance, competitors showcase their ability to elevate familiar ingredients into extraordinary culinary
+              creations. From succulent meat dishes to innovative vegetarian mains, each contestant presents a plate
+              that embodies their unique cooking style and showcases their passion for the craft.</p>
+          </li>
+          <li class="olist__element text-start">
+            <h4 class="olist__element-title">Dessert</h4>
+            <p class="olist__element-text">With creativity and finesse, entrants transform simple ingredients into
+              decadent sweets that tantalize
+              the senses. From elegant cakes to delicate pastries, each dessert tells a story of the contestant's
+              culinary journey and reflects their dedication to the art of pastry.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div>
+        <p class="fs-3">Let the heat ignite your passion! Don't be afraid to experiment, to push boundaries, and to
+          plate your creativity with confidence.
+          Every dish is an opportunity to tell a story, a symphony of taste waiting to be discovered.
+          So, sharpen your knives, fire up your passion to culinary victory!</p>
+
+        <figure>
+          <blockquote>
+            <p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is to
+              do what you believe is great work. And the only way to do great work is to love what you do. If you
+              haven't
+              found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
+            </p>
+            <footer class="blockquote-footer">
+              Steve Jobs
+            </footer>
+          </blockquote>
+        </figure>
+      </div>
+    </div>
+    <div class="container-md text-center mb-5">
+      <img src="./assets/images/wining-dish.jpg" class="img-fluid" alt="last winning dish">
+    </div>
+    <div class="contest mb-5">
+      <p>Focus on creating a flavorful first impression. Opt for a dish that is light yet packs a punch in terms of
+        taste. Consider innovative flavor pairings or unique textures to grab the judges' attention.</p>
+      <p>Showcase your culinary skill and mastery of technique. Choose a dish that allows you to demonstrate multiple
+        cooking techniques and highlights high-quality ingredients. Ensure perfect doneness and balanced flavors.</p>
+      <p>Create a dessert that is visually stunning, decadent in flavor, and has a perfect textural contrast. Consider
+        unique flavor combinations or plating techniques to stand out.</p>
+    </div>
+  </main>
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
 </html>

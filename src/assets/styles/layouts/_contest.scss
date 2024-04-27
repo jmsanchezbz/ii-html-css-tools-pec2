@@ -1,0 +1,69 @@
+body:has(a[href*="contest.html"]):has(.contest) {
+  .ulist__element:has(a[href*="contest.html"]) {
+    border-bottom: 1px solid rgba(var(--bs-link-color-rgb));
+  }
+}
+
+.width-60 {
+  width: 60%;
+}
+
+.front-image {
+  height: 400px;
+  background-image: url("../../assets/images/wellness-ingredients.webp");
+  background-size: cover;
+}
+
+:is(.contest) figure {
+    padding-top: 1rem;
+    padding-bottom: 0.1rem;
+    padding-left: 1rem;
+    border-left: 1px solid $light-font-color;
+}
+
+.contest {
+  margin: 0 auto;
+
+  .olist {
+    list-style: none;
+    counter-reset: list-counter;
+
+    &__element {
+      margin-bottom: 1rem;
+      counter-increment: list-counter;
+
+      &-title {
+        display: inline-block;
+      }
+
+      &-text {
+        margin-left: 2.3rem;
+      }
+
+      &::before {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0.5rem;
+        line-height: 1.5rem;
+        color: $light-font-color;
+        text-align: center;
+        content: counter(list-counter);
+        border: 1px solid $light-font-color;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@media (min-width: $tabletMinWidth) {
+  .contest {
+    width: 80%;
+  }
+}
+
+@media (min-width: $desktopMinWidth) {
+    .contest {
+      width: 60%;
+    }
+  }

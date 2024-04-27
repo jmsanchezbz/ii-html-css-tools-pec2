@@ -1,7 +1,8 @@
-@mixin hover-underline {
-    text-decoration: none; // Remove default underline
+@mixin hover-style {
+  text-decoration: none; // Remove default underline
 
-    &:hover {
-      border-bottom: 1px solid gray;
-    }
+  &:hover {
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
   }
+}

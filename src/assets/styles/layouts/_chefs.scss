@@ -1,3 +1,9 @@
+body:has(a[href*="chefs.html"]):has(.chef) {
+  .ulist__element a[href*="chefs.html"] {
+      border-bottom: 1px solid rgba(var(--bs-link-color-rgb));
+  }
+}
+
 .chef {
   display: flex;
   flex-direction: column;

@@ -13,7 +13,7 @@
 
       &__element {
         &:hover {
-          border-bottom: none;
+          border: none;
         }
       }
     }
@@ -43,10 +43,6 @@
       .ulist {
         flex-direction: row;
         justify-content: flex-end;
-
-        &__element:hover {
-          border-bottom: none;
-        }
       }
     }
   }
