@@ -36,6 +36,21 @@ body:has(a[href*="chefs.html"]):has(.chef) {
     }
   }
 
+  .my-article {
+    container-type: inline-size;
+
+    &:hover {
+      border-color: generate-shade($bg-accent-color,90%);
+      border-width: 3px;
+    }
+  }
+
+  @container (min-width: 500px){
+    article h5 {
+      font-size: 2rem;
+    }
+  }
+
   @media (min-width: $tabletMinWidth) {
     .flex-container {
       flex-direction: row;

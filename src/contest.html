@@ -13,9 +13,10 @@
 <body>
   <include src="./views/header.html"></include>
   <div class="front-image text-sm-center">
-    <div class="container-sm mb-5 width-60">
+    <div class="front-image__box container-sm mb-5 width-60">
       <h2>Cooking contest</h2>
-      <h4 class="mb-5">We are searching for the ultimate champion Three-Course-Challange, a show -stopping appetizes, a
+      <h4 class=" jose mb-5">We are searching for the ultimate champion Three-Course-Challange, a show -stopping
+        appetizes, a
         flavorful main course, and a decadent dessert.</h4>
       <h6>by TopChef</h6>
     </div>
@@ -93,7 +94,7 @@
       </div>
     </div>
     <div class="container-md text-center mb-5">
-      <img src="./assets/images/wining-dish.jpg" class="img-fluid" alt="last winning dish">
+      <img src="./assets/images/wining-dish.jpg" class="image--fluid" alt="last winning dish">
     </div>
     <div class="contest mb-5">
       <p>Focus on creating a flavorful first impression. Opt for a dish that is light yet packs a punch in terms of
@@ -103,6 +104,26 @@
       <p>Create a dessert that is visually stunning, decadent in flavor, and has a perfect textural contrast. Consider
         unique flavor combinations or plating techniques to stand out.</p>
     </div>
+    <section class="mb-3">
+      <h3>Fill out registration form</h3>
+      <form class="my-form" name="contact" method="POST" netlify>
+        <div class="mb-3">
+          <label for="name" class="label-form">Your Name: </label>
+          <input id="name" type="text" class="form-control" name="name" />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="label-form">Your Email: </label>
+          <input id="email" type="email" class="form-control" name="email" />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="label-form">Message: </label>
+          <textarea id="message" class="form-control" name="message"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </section>
   </main>
   <include src="./views/footer.html"></include>
   <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->

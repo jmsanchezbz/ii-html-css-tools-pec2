@@ -11,8 +11,26 @@ $tabletMinWidth: 1024px;
 $desktopMinWidth: 1600px;
 
 $light-font-color: rgb(120 120 120);
+$bg-accent-color: hsl(331 100% 50%);
+$button-bg: hsl(172 100% 50%);
 
 /* Bootstrap custom */
 /* Carousel dark */
-$carousel-caption-color: rgb(12 124 236);
 $carousel-control-icon-width: 6rem;
+
+/*Accordion*/
+$accordion-button-bg: hsl(214 97% 76%);
+$accordion-button-active-bg: $button-bg;
+
+/*Badges*/
+$badge-font-size: 1.5rem;
+$badge-font-weight: 200;
+$badge-padding-y: 0.3em;
+$badge-padding-x: 0.5em;
+
+/* Tooltip */
+$tooltip-bg: $bg-accent-color;
+
+/* Button */
+$btn-border-width: 0;
+$btn-font-family: $font-family-sans-serif;

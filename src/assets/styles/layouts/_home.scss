@@ -1,5 +1,5 @@
 body:has(a[href*="/"]):has(.home) {
-  .ulist__element a[href*="/"] {
+  .ulist__element a[href="/"] {
     border-bottom: 1px solid rgba(var(--bs-link-color-rgb));
   }
 }
@@ -21,6 +21,16 @@ body:has(a[href*="/"]):has(.home) {
     color: white;
   }
 
+  li.title {
+    container-type: inline-size;
+  }
+
+  @container (min-width: 500px) {
+    li.title h2 {
+      font-size: 2.8rem;
+    }
+  }
+
   main {
     background: no-repeat url("/src/assets/images/chef-cooking.png");
     background-color: black;
@@ -28,56 +38,39 @@ body:has(a[href*="/"]):has(.home) {
     background-size: cover;
 
     .home {
-      width: 100%;
-      margin: 0 auto;
       color: white;
 
-      section {
-        width: 100%;
+      li {
+        float: left;
+        min-width: 200px;
+        list-style-type: none;
 
-        li {
-          float: left;
-          min-width: 200px;
-          list-style-type: none;
-
-          &.title {
-            background: none;
-          }
+        &.title {
+          background: none;
         }
+      }
 
-        @supports not (display: grid) {
-          @media (max-width: $tabletMinWidth) {
-            .grid {
-              display: flex;
-              flex-direction: column;
-            }
-            .title {
-              justify-content: center;
-            }
-          }
-        }
-
-        @supports (display: grid) {
-          @media (max-width: $tabletMinWidth) {
-            .grid {
-              display: grid;
-              grid-auto-rows: auto;
-            }
-          }
-        }
-
-        .my-card {
-          width: 300px;
-          padding: 10px;
-          margin: 10px;
-          background: rgb(255 255 255 / 0.1);
-          border-radius: 5px;
-        }
+      .my-card {
+        width: 300px;
+        padding: 10px;
+        margin: 10px;
+        background: rgb(255 255 255 / 0.1);
+        border-radius: 5px;
       }
     }
   }
 
   @supports not (display: grid) {
+    @media (max-width: $tabletMinWidth) {
+      .grid {
+        display: flex;
+        flex-direction: column;
+      }
+      .title {
+        justify-content: center;
+      }
+    }
+
     @media (min-width: $tabletMinWidth) {
       .flex-container {
         display: flex;
@@ -130,6 +123,13 @@ body:has(a[href*="/"]):has(.home) {
   }
 
   @supports (display: grid) {
+    @media (max-width: $tabletMinWidth) {
+      .grid {
+        display: grid;
+        grid-auto-rows: auto;
+      }
+    }
+
     @media (min-width: $tabletMinWidth) {
       .grid {
         display: grid;

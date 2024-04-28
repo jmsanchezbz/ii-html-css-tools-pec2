@@ -15,15 +15,19 @@ body:has(a[href*="contest.html"]):has(.contest) {
 }
 
 :is(.contest) figure {
-    padding-top: 1rem;
-    padding-bottom: 0.1rem;
-    padding-left: 1rem;
-    border-left: 1px solid $light-font-color;
+  padding-top: 1rem;
+  padding-bottom: 0.1rem;
+  padding-left: 1rem;
+  border-left: 1px solid $light-font-color;
 }
 
 .contest {
   margin: 0 auto;
 
+  .front-image__box {
+    container-type: inline-size;
+  }
+  
   .olist {
     list-style: none;
     counter-reset: list-counter;
@@ -56,6 +60,12 @@ body:has(a[href*="contest.html"]):has(.contest) {
   }
 }
 
+@container (max-width: 600px) {
+  .front-image__box h4 {
+    font-size: 1rem;
+  }
+}
+
 @media (min-width: $tabletMinWidth) {
   .contest {
     width: 80%;
@@ -63,7 +73,7 @@ body:has(a[href*="contest.html"]):has(.contest) {
 }
 
 @media (min-width: $desktopMinWidth) {
-    .contest {
-      width: 60%;
-    }
+  .contest {
+    width: 60%;
   }
+}

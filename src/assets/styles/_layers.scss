@@ -1,4 +1,5 @@
 /* Right layer has more priority than left layer */
+@use "mixins" as m;
 
 @layer defaults, components, utilities;
 
@@ -11,18 +12,58 @@
     padding: 0;
     margin: 0;
   }
-
 }
 
 @layer components {
-  .carousel-caption {
-    background-color: rgba(240 240 240 / 0.7);
+  .carousel {
+    container-type: inline-size;
   }
-  
+
+  .carousel-caption {
+    background-color: hsl(0 0% 94% / 0.7);
+  }
+
+  .btn-custom {
+    padding: 5px;
+    background-color: $button-bg;
+    border: 0;
+    border-radius: 5px !important;
+
+    &:hover {
+      color: rgb(255 255 255);
+      background-color: $bg-accent-color;
+    }
+
+    --bs-btn-font-weight: 900;
+    --bs-btn-color: rgb(255 255 255);
+    --bs-btn-bg: $bg-accent-color;
+    --bs-btn-border-color: $bg-accent-color;
+    --bs-btn-hover-color: rgb(255 255 255);
+    --bs-btn-hover-bg: $bg-accent-color;
+    --bs-btn-hover-border-color: $bg-accent-color;
+    --bs-btn-focus-shadow-rgb: $button-bg;
+    --bs-btn-active-color: $bg-accent-color;
+    --bs-btn-active-bg: $bg-accent-color;
+    --bs-btn-active-border-color: $light-font-color;
+
+    @include button-size(
+      $padding-y: 0.2rem,
+      $padding-x: 0.2rem,
+      $font-size: 2rem,
+      $border-radius: 5px
+    );
+  }
+
+  .my-form {
+    padding: 20px;
+    background-color: rgb(230 230 230);
+    border: 1px solid lightgray;
+    border-radius: 5px;
+  }
 }
 
 @layer utilities {
-  .a {
-    color: rgb(0 0 0);
+  #my-special-form {
+    @include m.gradient-form
   }
 }

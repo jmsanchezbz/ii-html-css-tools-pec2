@@ -6,3 +6,19 @@
     border-left: 1px solid gray;
   }
 }
+
+@mixin gradient-background(
+  $start-color: hsl(331 100% 50%),
+  $start-per: 60%,
+  $end-color: hsl(200 97% 37%)
+) {
+  background: linear-gradient(to left, $start-color 60%, $end-color);
+}
+
+@mixin gradient-form(
+  $start-color: hsl(331 100% 50%),
+  $start-per: 60%,
+  $end-color: hsl(200 97% 37%)
+) {
+  background: linear-gradient(to right, $start-color 60%, $end-color);
+}

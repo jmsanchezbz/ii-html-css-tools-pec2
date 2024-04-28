@@ -1,5 +1,33 @@
+@use "../mixins" as m;
+
+body:has(.awards) {
+  header,
+  footer {
+    @include m.gradient-background;
+  }
+}
+
 body:has(a[href*="awards.html"]):has(.awards) {
   .ulist__element:has(a[href*="awards.html"]) {
     border-bottom: 1px solid rgba(var(--bs-link-color-rgb));
+  }
+}
+
+.awards {
+  :is(.accordion) h2 {
+    margin: 0;
+  }
+
+  @media (min-width: $tabletMinWidth) {
+    .content {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@container (min-width: 1024px) {
+  .carousel h5 {
+    font-size: 2em;
   }
 }
