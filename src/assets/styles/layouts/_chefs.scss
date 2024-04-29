@@ -45,7 +45,7 @@ body:has(a[href*="chefs.html"]):has(.chef) {
     }
   }
 
-  @container (min-width: 500px){
+  @container (min-width: #{$container-width}){
     article h5 {
       font-size: 2rem;
     }
