@@ -142,17 +142,17 @@ body:has(a[href*="/"]):has(.home) {
         grid-column: 3 / 5;
       }
 
-      .first-price {
+      .first-prize {
         grid-row: 2 / 3;
         grid-column: 2 / 3;
       }
 
-      .second-price {
+      .second-prize {
         grid-row: 4 / 5;
         grid-column: 1 / 2;
       }
 
-      .third-price {
+      .third-prize {
         grid-row: 3 / 4;
         grid-column: 5 / 6;
       }
