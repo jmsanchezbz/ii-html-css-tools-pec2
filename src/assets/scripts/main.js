@@ -8,6 +8,7 @@
 
 import * as Popper from "@popperjs/core";
 import * as bootstrap from "bootstrap";
+import * as feather from "feather-icons";
 
 /**
  * Write any other JavaScript below
@@ -36,3 +37,6 @@ const tooltipTriggerList = document.querySelectorAll(
 const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
+
+/* Feather icons */
+feather.replace()

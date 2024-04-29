@@ -57,6 +57,7 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "croppie": "^2.6.5",
+    "feather-icons": "^4.29.1",
     "stylelint-selector-bem-pattern": "^4.0.0"
   }
 }
