@@ -62,3 +62,18 @@ main {
     text-decoration: none;
   }
 }
+
+form {
+  input,
+  textarea {
+    &:focus {
+      &:valid {
+        background-color: rgb(141 255 255);
+      }
+
+      &:invalid {
+        background-color: rgb(246 125 125);
+      }
+    }
+  }
+}
